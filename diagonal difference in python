@@ -1,0 +1,18 @@
+n=int(input()) 
+temp=n
+l=0 
+r=0
+l1=[]
+for i in range(n): 
+    m=list(map(int, input().split()))
+    l1.append(m)
+for i in range(n): 
+    for j in range(n): 
+        if(i==j): 
+            l=l1[i][j]+l 
+    temp=temp-1 
+    r=l1[i][temp]+r 
+if(l>r): 
+    print(l-r) 
+else: 
+    print(r-l)
