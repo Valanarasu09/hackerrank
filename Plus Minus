@@ -1,0 +1,16 @@
+input1=int(input()) 
+input2=list(map(int,input().split())) 
+C1 = C2 = C3 = 0
+for i in input2:  
+    if(i>0):
+        C1=C1+1 
+    elif(i<0): 
+        C2=C2+1 
+    elif(i==0): 
+        C3=C3+1 
+C1=round(C1/input1,6) 
+C2=round(C2/input1,6) 
+C3=round(C3/input1,6) 
+print(C1)
+print(C2)
+print(C3)
