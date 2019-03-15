@@ -1,0 +1,7 @@
+input1 = sorted(list(map(int, input().split()))) 
+sum1 = sum2 = 0
+for i in range(0,len(input1)-1): 
+    sum1 = sum1 + input1[i] 
+for i in range(1,len(input1)): 
+    sum2 = sum2+input1[i]
+print(sum1,sum2)
