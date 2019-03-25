@@ -1,0 +1,15 @@
+n=input() 
+m=n[-2] 
+if(m=="A"):
+    if(n[0:2]=="12"): 
+        print("00"+n[2:-2])
+    else: 
+        print(n[0:-2]) 
+else:
+    if(n[0:2]=="12"): 
+        print(n[0:-2]) 
+    else:
+        d=int(n[0:2])+12
+        e=str(d)+n[2:-2]
+        print(e)
+    
