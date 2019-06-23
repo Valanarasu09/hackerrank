@@ -1,0 +1,12 @@
+def merge_the_tools(a, k):
+    b=''
+    for i in range(0,len(a),k):
+        for j in range(i,i+k):
+            if a[j] not in b:
+                b+=a[j] 
+        print(b) 
+        b=''
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
