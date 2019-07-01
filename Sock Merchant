@@ -1,0 +1,35 @@
+# hackerrank
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the sockMerchant function below.
+def sockMerchant(n, ar):
+    top=-1
+    stack=[]
+    c=0
+    for i in sorted(ar):
+        if i not in stack:
+            stack.append(i)
+            top=top+1 
+        elif i==stack[top]:
+            stack.pop()
+            top=top-1
+            c=c+1
+    return(c)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
